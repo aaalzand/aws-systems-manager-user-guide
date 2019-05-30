@@ -55,7 +55,7 @@ aws ssm start-automation-execution --document-name AWS-ResizeInstance --targets 
 The following example uses the AWS\-StopEC2Instance Automation document to stop all Amazon EC2 instances that are tagged with both of the following keys and values:*Environment\-Pre\-production* and *ServerRole\-WebServer*\. The Automation runs only on instances tagged with both key\-value pairs\.
 
 ```
-aws ssm start-automation-execution --document-name AWS-ResizeInstance --targets Key=tag:Environment,Values=Pre-production Key=tag:ServerRole, Values=WebServer --target-parameter-name InstanceId
+aws ssm start-automation-execution --document-name AWS-StopEC2Instance --targets Key=tag:Environment,Values=Pre-production Key=tag:ServerRole,Values=WebServer --target-parameter-name InstanceId
 ```
 
 ## Targeting AWS Resource Groups<a name="automation-working-targets-resource-groups"></a>
